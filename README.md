@@ -21,4 +21,7 @@
 - vite
 - vue 3
 - typescript
+- html
+- css
+- javascript
 - git
