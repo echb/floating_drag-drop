@@ -50,7 +50,9 @@ function onMouseUp(index: number) {
 }
 
 observerSelectedItem = new ResizeObserver(entries => {
+  // @ts-ignore
   selected.value.w = Number(entries[0].target.style.width.replace('px', ''))
+  // @ts-ignore
   selected.value.h = Number(entries[0].target.style.height.replace('px', ''))
 })
 
@@ -75,6 +77,7 @@ function add(type: boxType) {
 }
 
 const reversedItems: ComputedRef<Array<Item>> = computed(() => {
+  // @ts-ignore
   return items.value.toReversed()
 })
 async function copyToClipboard(text: string) {
